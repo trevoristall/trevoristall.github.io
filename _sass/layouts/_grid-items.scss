@@ -9,8 +9,7 @@
 .grid {
   margin: 0;
   width: 100%;
-  min-height: 30rem;
-
+  min-height: 15rem;
   .repeat-item-0 {
     @include grid-span(6, 1);
     @include breakpoint($L) {
@@ -119,27 +118,65 @@
   }
 }
 
+.content-container.work {
+  max-width: $XL;
+}
 
-.post-list {
-  clear: both;
-  li {
-    padding: 1em;
-    border-bottom: 1px solid $light-gray;
-    &:hover {
-      .post-link {
-        color: $blue;
+.work {
+  .grid {
+    margin: 0;
+    width: 100%;
+    min-height: 30rem;
+    .repeat-item-0 {
+      @include grid-span(6, 1);
+      @include breakpoint($L) {
+        @include grid-span(4, 1);
       }
     }
-    .post-meta {
-      color: $dark-gray;
-      text-shadow: none;
+    .repeat-item-1 {
+      @include grid-span(6, 7);
+      @media all and (max-width: $L) {
+        clear: right;
+      }
+      @include breakpoint($L) {
+        @include grid-span(4, 5);
+      }
     }
-    h4 {
-      text-align: left;
-      text-shadow: none;
+    .repeat-item-2 {
+      @include grid-span(6, 1);
+      @media all and (max-width: $L) {
+        clear: right;
+      }
+      @include breakpoint($L) {
+        @include grid-span(4, 9);
+      }
     }
-    .post-link {
+    .repeat-item-3 {
+      @include grid-span(6, 7);
+      @media all and (max-width: $L) {
+        clear: right;
+      }
 
+      @include breakpoint($L) {
+        @include grid-span(4, 1);
+        clear: both;
+      }
+    }
+    .repeat-item-4 {
+      @include grid-span(6, 1);
+      clear: right;
+      @include breakpoint($L) {
+        @include grid-span(4, 5);
+
+      }
+    }
+    .repeat-item-5 {
+      @include grid-span(6, 7);
+      clear: right;
+      @include breakpoint($L) {
+        @include grid-span(4, 9);
+
+      }
     }
   }
 }

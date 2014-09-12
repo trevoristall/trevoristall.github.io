@@ -3,11 +3,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>Trevor Allen - {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?bust={{ site.time | date_to_xmlschema | cgi_escape }}" >
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,500' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script>
       window.lzld||function(e,d){function n(){p=!0;f();setTimeout(f,25)}function q(a){var b=0;return function(){var c=+new Date;20>c-b||(b=c,a.apply(this,arguments))}}function h(a,b,c){a.attachEvent?a.attachEvent&&a.attachEvent("on"+b,c):a.addEventListener(b,c,!1)}function k(a,b,c){a.detachEvent?a.detachEvent&&a.detachEvent("on"+b,c):a.removeEventListener(b,c,!1)}function r(a,b){return x||y(d.documentElement,a)&&a.getBoundingClientRect().top<z+A?(a.onload=null,a.removeAttribute("onload"),a.onerror=null,
       a.removeAttribute("onerror"),a.src=a.getAttribute(l),a.removeAttribute(l),g[b]=null,!0):!1}function s(){return 0<=d.documentElement.clientHeight?d.documentElement.clientHeight:d.body&&0<=d.body.clientHeight?d.body.clientHeight:0<=e.innerHeight?e.innerHeight:0}function t(){var a=g.length,b,c=!0;for(b=0;b<a;b++){var d=g[b];null===d||r(d,b)||(c=!1)}c&&p&&(m=!0,k(e,"resize",u),k(e,"scroll",f),k(e,"touchmove",f),k(e,"load",n))}function v(){m=!1;h(e,"resize",u);h(e,"scroll",f);h(e,"touchmove",f)}function B(){var a=

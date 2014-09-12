@@ -1,0 +1,23 @@
+.post-list {
+  clear: both;
+  li {
+    padding: 1em;
+    border-bottom: 1px solid $light-gray;
+    &:hover {
+      .post-link {
+        color: $blue;
+      }
+    }
+    .post-meta {
+      color: $dark-gray;
+      text-shadow: none;
+    }
+    h4 {
+      text-align: left;
+      text-shadow: none;
+    }
+    .post-link {
+
+    }
+  }
+}
