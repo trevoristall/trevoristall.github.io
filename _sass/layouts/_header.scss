@@ -1,0 +1,44 @@
+.no-js body .masthead .caption h1 {
+  display: initial;
+}
+
+.no-anim .masthead .caption h1 {
+  display: initial;
+}
+
+.masthead {
+  height: 20rem;
+  width: 100%;
+  background: url(/assets/images/front_header.jpg) no-repeat center center;
+  background-attachment: scroll;
+  background-size: cover;
+  position: relative;
+  @include breakpoint($L) {
+    background-attachment: fixed;
+    height: 26rem;
+  }
+  .caption {
+    margin-top: 2rem;
+    @include grid-span(6,6);
+    @include breakpoint($M) {
+      margin-top: 3rem;
+      @include grid-span(8,4);
+    }
+    h1 {
+      display: none;
+      color: white;
+      font-size: 1.8rem;
+      text-align: right;
+      font-weight: 300;
+      @include breakpoint($M) {
+        font-size: 2.2rem;
+      }
+      @include breakpoint($XL) {
+        font-size: 2.8rem;
+      }
+      span {
+        color: $blue;
+      }
+    }
+  }
+}

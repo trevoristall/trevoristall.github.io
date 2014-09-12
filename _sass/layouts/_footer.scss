@@ -1,0 +1,13 @@
+.site-footer {
+  background: $blue;
+  height: $nav-height;
+  color: $nav-font-1;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: $nav-height;
+  .content-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

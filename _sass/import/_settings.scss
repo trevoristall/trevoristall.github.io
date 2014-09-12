@@ -1,0 +1,72 @@
+/*
+* Colors
+*/
+
+$red: #d9392d;
+$blue: #2d72d9;
+$mediumblue: #1c52a2;
+$darkblue: #092754;
+$green: #2dc273;
+$orange: #f1a815;
+
+$light-gray: #bbc2cc;
+$dark-gray: #9ca4b2;
+
+$nav-bg-1: $blue;
+$nav-font-1: $darkblue;
+$nav-font-2: $mediumblue;
+
+$bullet-color: $blue;
+
+
+$bg-1: #e9ebef;
+$bg-2: $dark-gray;
+$bg-3: darken($bg-1, 10%);
+$bg-4:darken($bg-1, 30%);
+$bg-5: $dark-gray;
+
+/*
+* Typography
+*/
+$font1             : 'Alegreya Sans', sans-serif;
+$font2 : $font1;
+
+$font-weight: 400;
+
+$header-color      : #121821;
+$body-color        : #2b3442;
+
+$color-link        : $blue;
+$color-link-hover  : darken($color-link, 10%);
+
+/*
+* Breakpoints
+*/
+$XS                : 20rem;     //(320px)
+$S                 : 30rem;      //(480px)
+$M                 : 37.5rem;    //(600px)
+$L                 : 48rem;      //(768px)
+$XL                : 56.25rem;   //(900px)
+$XXL               : 68.75rem;   //(1100px)
+
+$gutter            : 2rem;
+$nav-height     : 4rem;
+
+$social-colors: (
+dribbble           : #ea4c89,
+facebook           : #3b5998,
+github             : #171515,
+google             : #db4437,
+twitter            : #55acee,
+);
+
+$z-index: (
+modal              : 100,
+header         : 85,
+navigation             : 90,
+content: 75,
+triangle           : 70,
+navigation-rainbow : 60,
+share-type         : 50,
+share              : 40
+);

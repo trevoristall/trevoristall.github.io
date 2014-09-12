@@ -1,0 +1,40 @@
+.no-anim .contact-form {
+  input,
+  textarea,
+  label,
+  .button {
+    display: initial;
+  }
+}
+
+.contact-form {
+
+  input, textarea, label, .button {
+    display: none;
+  }
+
+  input, textarea {
+    border: none;
+    height: 3rem;
+    width: 100%;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    font-weight: 300;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgb(214, 213, 213);
+    margin-bottom: 2rem;
+  }
+  textarea {
+    min-height: 9rem;
+  }
+  label {
+    font-size: 1.5rem;
+    color: $header-color;
+  }
+  .button {
+    padding: .5rem 1rem;
+  }
+
+}

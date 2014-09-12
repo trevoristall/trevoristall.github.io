@@ -1,0 +1,82 @@
+
+.content-container.portfolio {
+  text-align: center;
+  background: white;
+
+  .portfolio-image-1 {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto .5rem auto;
+    padding: .5rem;
+    background: whitesmoke;
+  }
+
+  .portfolio-image-2 {
+    float: left;
+    height: 8rem;
+    width: auto;
+  }
+
+  h3,h4,p {
+    text-align: left;
+  }
+  h3 {
+    clear: both;
+  }
+  img {
+    padding: .5em;
+  }
+  p {
+  }
+  .button {
+    margin: 2rem auto;
+  }
+  .project-info {
+    margin-bottom: 3rem;
+    &:after {
+      display: table;
+      clear: both;
+      content: '';
+    }
+    ul {
+      text-align: center;
+    }
+    .info-item {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right;
+      clear: both;
+      margin-bottom: .5rem;
+      padding: .4rem .8rem;
+      border-right: 1px solid #808083;
+      @include breakpoint($L) {
+        display: inline-block;
+        clear: none;
+        text-align: left;
+        margin-bottom: 0;
+      }
+
+      .dt {
+        @include breakpoint($L) {
+          font-size: .5rem;
+        }
+        color: $dark-gray;
+        font-size: .8rem;
+        line-height: 1;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: normal;
+      }
+      .dd {
+        @include breakpoint($L) {
+          font-size: .7rem;
+        }
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

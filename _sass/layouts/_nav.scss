@@ -1,0 +1,69 @@
+.main-nav {
+	height: $nav-height;
+	width: 100%;
+	background-color: $nav-bg-1;
+	padding: 0;
+	text-align: left;
+	.content-container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	img {
+		display: inline-block;
+		float: right;
+		height: $nav-height / 2.6;
+		width: auto;
+		padding: 0;
+		margin-top: $nav-height / 4;
+		@media (max-width: $M) {
+			margin-top: 1.3rem;
+			height: 1rem;
+		}
+	}
+	li {
+		display: inline-block;
+		margin-right: $gutter / 4;
+		a.active {
+			color: $bg-1;
+			&:hover {
+				color: $bg-1;
+			}
+		}
+		a {
+			position: relative;
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: $nav-height;
+			color: $nav-font-1;
+			text-shadow: none;
+			&:hover {
+				color: $bg-1;
+			}
+			&:before, &:after {
+				position: absolute;
+				display: inline-block;
+				opacity: 0;
+				top: -1.42rem;
+				@include transition(transform 0.35s ease-in-out, opacity 0.35s ease-in-out);
+			}
+			&:before {
+				left: 0;
+				content: '[';
+				@include transform(translateX($nav-height / 4));
+			}
+			&:hover:before, &.active:before {
+				opacity: 1;
+				@include transform(translateX(-$nav-height / 10));
+			}
+			&:after {
+				right: 0;
+				content: ']';
+				@include transform(translateX(-$nav-height / 4));
+			}
+			&:hover:after, &.active:after {
+				opacity: 1;
+				@include transform(translateX($nav-height / 10));
+			}
+		}
+	}
+}

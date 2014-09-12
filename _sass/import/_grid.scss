@@ -1,0 +1,14 @@
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.content-container {
+  min-height: 100%;
+  max-width: $M;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  @include add-grid(12);
+  @include add-gutter(1/3);
+  @include add-gutter-style('split');
+}

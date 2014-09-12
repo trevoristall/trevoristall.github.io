@@ -1,0 +1,16 @@
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
+
+@each $social-network, $social-color in $social-colors {
+  .social-link--#{$social-network} {
+    background: $social-color;
+  }
+  .social-link--#{$social-network}:hover {
+    background: lighten($social-color, 10%);
+  }
+}
