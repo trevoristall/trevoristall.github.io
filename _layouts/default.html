@@ -6,7 +6,7 @@
 <body>
 
   {% include header.html %}
-  <div id="preloader"></div>
+  <div class="preloader"></div>
   {% assign pages_list = site.pages | sort:"path" %}
   {% assign group = 'navigation' %}
   {% include navigation.html %}
