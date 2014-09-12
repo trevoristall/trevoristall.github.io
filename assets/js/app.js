@@ -41,7 +41,7 @@ $navigationLink.on('click', function(ev) {
 pageTransition = function(self, event) {
   event.preventDefault();
   $body.velocity('transition.slideLeftBigOut', {duration: 500, complete: function() {
-    window.location.href = self.attr('href');
+    window.location.assign(self.attr('href'));
   }
 });
 }
