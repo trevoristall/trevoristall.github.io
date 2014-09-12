@@ -42,12 +42,12 @@ $color-link-hover  : darken($color-link, 10%);
 /*
 * Breakpoints
 */
-$XS                : 20rem;     //(320px)
-$S                 : 30rem;      //(480px)
-$M                 : 37.5rem;    //(600px)
-$L                 : 48rem;      //(768px)
-$XL                : 56.25rem;   //(900px)
-$XXL               : 68.75rem;   //(1100px)
+$XS                : 17.777rem;//(320px)
+$S                 : 26.666rem;//(480px)
+$M                 : 33.333rem;//(600px)
+$L                 : 42.666rem;//(768px)
+$XL                : 50rem;//(900px)
+$XXL               : 61.11rem;   //(1100px)
 
 $gutter            : 2rem;
 $nav-height     : 4rem;

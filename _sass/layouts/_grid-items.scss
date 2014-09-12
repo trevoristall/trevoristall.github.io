@@ -10,57 +10,35 @@
   margin: 0;
   width: 100%;
   min-height: 15rem;
+  @include clearfixme();
   .repeat-item-0 {
-    @include grid-span(6, 1);
-    @include breakpoint($L) {
+    @include grid-span(12,1);
+    @media all and (max-width: $M) {
+      clear: both;
+    }
+    @include breakpoint($M) {
       @include grid-span(4, 1);
     }
   }
   .repeat-item-1 {
-    @include grid-span(6, 7);
-    @media all and (max-width: $L) {
-      clear: right;
+    @include grid-span(12,1);
+    @media all and (max-width: $M) {
+      clear: both;
     }
-    @include breakpoint($L) {
+    @include breakpoint($M) {
       @include grid-span(4, 5);
     }
   }
   .repeat-item-2 {
-    @include grid-span(6, 1);
-    @media all and (max-width: $L) {
-      clear: right;
-    }
-    @include breakpoint($L) {
-      @include grid-span(4, 9);
-    }
-  }
-  .repeat-item-3 {
-    @include grid-span(6, 7);
-    @media all and (max-width: $L) {
-      clear: right;
-    }
-
-    @include breakpoint($L) {
-      @include grid-span(4, 1);
+    @include grid-span(12,1);
+    @media all and (max-width: $M) {
       clear: both;
     }
-  }
-  .repeat-item-4 {
-    @include grid-span(6, 1);
-    clear: right;
-    @include breakpoint($L) {
-      @include grid-span(4, 5);
-
-    }
-  }
-  .repeat-item-5 {
-    @include grid-span(6, 7);
-    clear: right;
-    @include breakpoint($L) {
+    @include breakpoint($M) {
       @include grid-span(4, 9);
-
     }
   }
+
 
   figure {
     display: none;
@@ -118,10 +96,6 @@
   }
 }
 
-.content-container.work {
-  max-width: $XL;
-}
-
 .work {
   .grid {
     margin: 0;
@@ -129,35 +103,35 @@
     min-height: 30rem;
     .repeat-item-0 {
       @include grid-span(6, 1);
-      @include breakpoint($L) {
+      @include breakpoint($M) {
         @include grid-span(4, 1);
       }
     }
     .repeat-item-1 {
       @include grid-span(6, 7);
-      @media all and (max-width: $L) {
+      @media all and (max-width: $M) {
         clear: right;
       }
-      @include breakpoint($L) {
+      @include breakpoint($M) {
         @include grid-span(4, 5);
       }
     }
     .repeat-item-2 {
       @include grid-span(6, 1);
-      @media all and (max-width: $L) {
+      @media all and (max-width: $M) {
         clear: right;
       }
-      @include breakpoint($L) {
+      @include breakpoint($M) {
         @include grid-span(4, 9);
       }
     }
     .repeat-item-3 {
       @include grid-span(6, 7);
-      @media all and (max-width: $L) {
+      @media all and (max-width: $M) {
         clear: right;
       }
 
-      @include breakpoint($L) {
+      @include breakpoint($M) {
         @include grid-span(4, 1);
         clear: both;
       }
@@ -165,7 +139,7 @@
     .repeat-item-4 {
       @include grid-span(6, 1);
       clear: right;
-      @include breakpoint($L) {
+      @include breakpoint($M) {
         @include grid-span(4, 5);
 
       }
@@ -173,7 +147,7 @@
     .repeat-item-5 {
       @include grid-span(6, 7);
       clear: right;
-      @include breakpoint($L) {
+      @include breakpoint($M) {
         @include grid-span(4, 9);
 
       }

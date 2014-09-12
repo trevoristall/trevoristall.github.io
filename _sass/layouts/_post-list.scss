@@ -1,23 +1,35 @@
 .post-list {
   clear: both;
+  @include clearfixme();
   li {
-    padding: 1em;
+    @include rem-fallback(padding, 1);
     border-bottom: 1px solid $light-gray;
+    clear: both;
+    @include clearfixme();
     &:hover {
       .post-link {
         color: $blue;
       }
     }
-    .post-meta {
-      color: $dark-gray;
-      text-shadow: none;
-    }
-    h4 {
-      text-align: left;
-      text-shadow: none;
-    }
-    .post-link {
-
-    }
   }
+  .post-meta {
+    color: $dark-gray;
+    text-shadow: none;
+    float: right;
+  }
+  h4 {
+    text-align: left;
+    float: left;
+    text-shadow: none;
+    margin: 0;
+  }
+  .post-link {
+  }
+}
+
+.blog.post-list {
+  h4, .post-meta {
+    float: none;
+  }
+
 }

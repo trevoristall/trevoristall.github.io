@@ -4,6 +4,7 @@
 @import "singularitygs";
 
 @import "import/settings";
+@import "tools/mixins";
 @import "import/grid";
 
 
@@ -12,9 +13,6 @@
  }
 
 @import "base/base-styles";
-
-
-@import "tools/mixins";
 
 @import "layouts/*";
 
