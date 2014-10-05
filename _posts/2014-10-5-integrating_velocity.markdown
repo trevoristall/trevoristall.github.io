@@ -35,6 +35,6 @@ Since there are plenty of demos using VelocityJS around the web (many of them co
 * Hover animations. Generally are easy to accomplish in css and shouldn't be overly complex anyway.
 * Animations that happen continually. Unless they are complex, css is probably better suited to this.
 
-I try to keep animations under 400ms(ideally <300ms) from start to finish. Go over that you start to adversly affect user experience and it becomes an annoyance rather than a cool feature.
+I try to keep animations under 400ms(ideally <300ms) from start to finish. Go over that and you start to adversly affect user experience and it becomes an annoyance rather than a cool feature.
 
 Before you animate something, really consider if it's actually adding anything or if you're just doing it because you can. Weigh the possible benefits vs the potential hits to performance, whether or not it's going to be "spammy" (happening very frequently and becoming an annoyance) or any other negative factors. The golden rule here is usually "Less is more".
