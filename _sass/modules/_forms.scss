@@ -3,14 +3,14 @@
   textarea,
   label,
   .button {
-    display: initial;
+    opacity: 1;
   }
 }
 
 .contact-form {
 
   input, textarea, label, .button {
-    display: none;
+    opacity: 0;
   }
 
   input, textarea {

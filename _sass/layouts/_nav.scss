@@ -1,7 +1,7 @@
 .main-nav {
 	height: $nav-height;
 	width: 100%;
-	background-color: $nav-bg-1;
+	background-color: #ffffff;
 	padding: 0;
 	text-align: left;
 	.content-container {
@@ -27,9 +27,9 @@
 		display: inline-block;
 		margin-right: $gutter / 4;
 		a.active {
-			color: $bg-1;
+			color: $blue;
 			&:hover {
-				color: $bg-1;
+				color: $blue;
 			}
 		}
 		a {
@@ -40,7 +40,7 @@
 			color: $nav-font-1;
 			text-shadow: none;
 			&:hover {
-				color: $bg-1;
+				color: $blue;
 			}
 			&:before, &:after {
 				position: absolute;

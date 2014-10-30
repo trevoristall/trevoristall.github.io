@@ -1,9 +1,9 @@
 .no-js body .masthead .caption h1 {
-  display: initial;
+  opacity: 1;
 }
 
 .no-anim .masthead .caption h1 {
-  display: initial;
+  opacity: 1;
 }
 
 .masthead {
@@ -18,13 +18,16 @@
   }
   .caption {
     margin-top: 2rem;
-    @include grid-span(6,6);
+    @include grid-span(7,5);
     @include breakpoint($M) {
+        @include grid-span(9,3);
+    }
+    @include breakpoint($L) {
       margin-top: 3rem;
-      @include grid-span(8,4);
+
     }
     h1 {
-      display: none;
+      opacity: 0;
       color: white;
       @include font-size(1.5);
       text-align: right;
@@ -37,6 +40,7 @@
       }
       span {
         color: $blue;
+        white-space: nowrap;
       }
     }
   }

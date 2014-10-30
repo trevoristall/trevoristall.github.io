@@ -14,7 +14,8 @@
       width: 8rem;
       height: 8rem;
       img {
-        display: none;
+        opacity: 0;
+        display: block;
         margin: 0 auto;
         width: 100%;
         height: auto;
@@ -35,5 +36,5 @@
 }
 
 .no-js .masthead .profile-image img {
-  display: block;
+  opacity: 1;
 }

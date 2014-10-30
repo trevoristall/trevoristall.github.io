@@ -1,15 +1,14 @@
 .no-js body .grid figure {
-  display: initial;
+  opacity: 1;
 }
 
 .no-anim .grid figure {
-  display: initial;
+  opacity: 1;
 }
 
 .grid {
   margin: 0;
   width: 100%;
-  min-height: 15rem;
   @include clearfixme();
   .repeat-item-0 {
     @include grid-span(12,1);
@@ -41,7 +40,8 @@
 
 
   figure {
-    display: none;
+    display: block;
+    opacity: 0;
     position: relative;
     z-index: 1;
     margin-bottom: $gutter;
