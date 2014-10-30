@@ -25,6 +25,15 @@
   }
 }
 
+.profiles {
+    list-style-type: none;
+    text-align: center;
+    .profile {
+        display: inline-block;
+        margin: 0 15px 15px 15px;
+    }
+}
+
 .no-js .masthead .profile-image img {
   display: block;
 }
