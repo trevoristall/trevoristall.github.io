@@ -2,8 +2,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Trevor Allen - {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
+    <title>Trevor Allen | Asheville, NC Web Designer &amp; Developer | {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!--<meta name="description" content="{{ site.description }}">-->
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="google-site-verification" content="LmLnagAyctsexne342I9km3RwiSBIAxb8vTqQlTxgq0" />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?bust={{ site.time | date_to_xmlschema | cgi_escape }}" >
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

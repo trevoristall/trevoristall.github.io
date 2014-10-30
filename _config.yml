@@ -11,10 +11,11 @@ github_username:  treall
 
 #exclude: [scripts/]
 #source: doc/
-#destination: app/ 
+#destination: app/
 
 # Build settings
 markdown: kramdown
+gem: jekyll-sitemap
 
 port: 8080
 highlighter: true
