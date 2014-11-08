@@ -17,12 +17,12 @@
         ctx.drawImage(image, 0, 0);
 
         Modernizr.addTest('todataurljpeg', function() {
-            return canvas.toDataURL('image/jpeg').indexOf('data:image/jpeg') === 0;
+            return canvas.toDataURL('images/jpeg').indexOf('data:images/jpeg') === 0;
         });
         Modernizr.addTest('todataurlwebp', function() {
-            return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+            return canvas.toDataURL('images/webp').indexOf('data:images/webp') === 0;
         });
     };
 
-    image.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==';
+    image.src = 'data:images/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==';
 }());
