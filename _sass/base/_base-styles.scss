@@ -1,7 +1,3 @@
-.no-js body {
-    opacity: 1;
-}
-
 html, body {
     height: 100%;
     width: 100%;
@@ -21,7 +17,6 @@ body {
     line-height: 1.618;//golden ratio
     background: $bg-1;
     -webkit-font-smoothing: antialiased;
-    opacity: 0;
 }
 
 .no-js body {
