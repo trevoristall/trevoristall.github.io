@@ -5,8 +5,6 @@
         body = doc.body;
 
 
-    FastClick.attach(document.body);
-
     if (!Modernizr.svg) {
         $('img[src*="svg"]').attr('src', function () {
             return $(this).attr('src').replace('.svg', '.png');
