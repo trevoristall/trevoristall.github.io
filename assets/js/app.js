@@ -2,7 +2,7 @@
 
     'use strict';
     var doc = document,
-        body = doc.body;
+        body = doc.querySelectorAll("body");;
 
 
     if (!Modernizr.svg) {
@@ -12,7 +12,7 @@
     }
 
     Velocity(body, 'transition.slideDownBigIn', {duration: 400});
-    
+
     // $('.contact-form').find('input, textarea, label').velocity('transition.slideLeftBigIn', {delay: 400, stagger: 125, drag: true});
     // $('.masthead').find('h1').velocity('transition.slideUpBigIn', {delay: 400, duration: 500});
     // $('.grid').find("figure").velocity('transition.slideLeftBigIn', {delay: 400, stagger: 150, drag: true});
