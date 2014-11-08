@@ -5,6 +5,7 @@
         // body = doc.querySelectorAll("body"),
         form = doc.querySelectorAll("form *"),
         figure = doc.querySelectorAll("figure"),
+        profile = doc.querySelectorAll(".profile-image img"),
         header = doc.querySelectorAll(".masthead h1");
 
 
@@ -16,11 +17,12 @@
     }
 
     //$('.contact-form').find('input, textarea, label').
-    Velocity(form, 'transition.slideLeftBigIn', {delay: 400, stagger: 125, drag: true});
+    Velocity(form, 'transition.slideLeftBigIn', {stagger: 125, drag: true});
     // $('.masthead').find('h1').
-    Velocity(header, 'transition.slideUpBigIn', {delay: 400, duration: 500});
+    Velocity(header, 'transition.slideUpBigIn', {duration: 500});
     // $('.grid').find("figure")
-    Velocity(figure, 'transition.slideLeftBigIn', {delay: 400, stagger: 150, drag: true});
-    // $('.profile-image').find('img').velocity('transition.slideDownBigIn', {delay: 400, duration: 600});
+    Velocity(figure, 'transition.slideLeftBigIn', {stagger: 150, drag: true});
+    // $('.profile-image').find('img').
+    Velocity(profile, 'transition.slideDownBigIn', {duration: 600});
 
 }());
