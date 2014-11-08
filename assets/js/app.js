@@ -3,8 +3,7 @@
     'use strict';
     var doc = document,
         // body = doc.querySelectorAll("body"),
-        form = doc.querySelectorAll("form"),
-        formItems = form.children,
+        form = doc.querySelectorAll("form *"),
         figure = doc.querySelectorAll("figure"),
         header = doc.querySelectorAll(".masthead h1");
 
@@ -17,7 +16,7 @@
     }
 
     //$('.contact-form').find('input, textarea, label').
-    Velocity(formItems, 'transition.slideLeftBigIn', {delay: 400, stagger: 125, drag: true});
+    Velocity(form, 'transition.slideLeftBigIn', {delay: 400, stagger: 125, drag: true});
     // $('.masthead').find('h1').
     Velocity(header, 'transition.slideUpBigIn', {delay: 400, duration: 500});
     // $('.grid').find("figure")
