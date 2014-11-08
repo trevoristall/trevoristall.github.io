@@ -7,7 +7,7 @@ description: "Asheville UI/UX, Graphic design and illustration."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.mynameistrevor.com" # the base hostname & protocol for your site
 twitter_username: ampleheights
-github_username:  treall
+github_username:  ampleheights
 
 #exclude: [scripts/]
 #source: doc/
@@ -15,7 +15,7 @@ github_username:  treall
 
 # Build settings
 markdown: kramdown
-gem: jekyll-sitemap
+#gem: jekyll-sitemap
 
 port: 8080
 highlighter: true
