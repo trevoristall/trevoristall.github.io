@@ -2,7 +2,7 @@
 
     'use strict';
     var doc = document,
-        body = doc.body;
+        body = doc.querySelectorAll("body");;
 
 
     if (!Modernizr.svg) {
