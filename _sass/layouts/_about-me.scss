@@ -1,29 +1,33 @@
+.no-js .masthead .profile-image img {
+    opacity: 1;
+}
+
 .about-me {
-  .content-container {
-    margin-top: 2rem;
-  }
-  .masthead {
-    background:url(/assets/images/about_header.jpg) no-repeat center 25%;
-    z-index: -1;
-    .profile-image {
-      position: absolute;
-      bottom: -4rem;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 8rem;
-      height: 8rem;
-      img {
-        opacity: 0;
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-        border-radius: 100%;
-        border: .4rem solid #e9ebef;
-      }
+    .content-container {
+        margin-top: 2rem;
     }
-  }
+    .masthead {
+        background:url(/assets/images/about_header.jpg) no-repeat center 25%;
+        z-index: -1;
+        .profile-image {
+            position: absolute;
+            bottom: -4rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 8rem;
+            height: 8rem;
+            img {
+                opacity: 0;
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+                border-radius: 100%;
+                border: .4rem solid #e9ebef;
+            }
+        }
+    }
 }
 
 .profiles {
@@ -32,9 +36,51 @@
     .profile {
         display: inline-block;
         margin: 0 15px 15px 15px;
+        a {
+            -moz-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -moz-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -moz-backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        a:hover {
+            -moz-animation: zoomitbig .3s ease-out;
+            -webkit-animation: zoomitbig .3s ease-out;
+            animation: zoomitbig .3s ease-out;
+        }
     }
-}
-
-.no-js .masthead .profile-image img {
-  opacity: 1;
+    .github a {
+        color: #333333;
+        &:hover {
+            color: lighten(#333333, 10%);
+        }
+    }
+    .linkedin a {
+        color: #0878b5;
+        &:hover {
+            color: lighten(#0878b5, 10%);
+        }
+    }
+    .codepen a {
+        color: black;
+        &:hover {
+            color: lighten(black, 10%);
+        }
+    }
+    .twitter a {
+        color: #55acee;
+        &:hover {
+            color: lighten(#55acee, 10%);
+        }
+    }
+    .email a {
+        color: #d34937;
+        &:hover {
+            color: lighten(#d34937, 10%);
+        }
+    }
 }

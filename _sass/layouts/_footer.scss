@@ -1,11 +1,12 @@
 .site-footer {
-  background: $blue;
-  height: $nav-height;
-  color: $nav-font-1;
+  background: $nav-bg;
+  height: $nav-height - 1;
+  color: $nav-color;
+  border-top: 1px solid $nav-border;
   position: relative;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 500;
-  line-height: $nav-height;
+  line-height: $nav-height - 1;
   clear: both;
   .content-container {
     padding-top: 0;

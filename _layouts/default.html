@@ -8,9 +8,7 @@
 
 <body>
 	{% include header.html %}
-	{% assign pages_list = site.pages | sort:"path" %}
-	{% assign group = 'navigation' %}
-	{% include navigation.html %}
+
 
 	{{ content }}
 

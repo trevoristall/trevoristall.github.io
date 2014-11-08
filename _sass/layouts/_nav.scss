@@ -1,7 +1,8 @@
 .main-nav {
 	height: $nav-height;
 	width: 100%;
-	background-color: #ffffff;
+	border-bottom: 1px solid $nav-border;
+	background-color: $nav-bg;
 	padding: 0;
 	text-align: left;
 	.content-container {
@@ -27,26 +28,25 @@
 		display: inline-block;
 		margin-right: $gutter / 4;
 		a.active {
-			color: $blue;
-			&:hover {
-				color: $blue;
-			}
+			color: $nav-color-hover;
+
 		}
 		a {
+			font-family: $font2;
 			position: relative;
 			font-size: 1rem;
 			font-weight: 500;
 			line-height: $nav-height;
-			color: $nav-font-1;
+			color: $nav-color;
 			text-shadow: none;
 			&:hover {
-				color: $blue;
+				color: $nav-color-hover;
 			}
 			&:before, &:after {
 				position: absolute;
 				display: inline-block;
 				opacity: 0;
-				top: -1.42rem;
+				top: -1.4rem;
 				@include transition(transform 0.35s ease-in-out, opacity 0.35s ease-in-out);
 			}
 			&:before {

@@ -2,22 +2,20 @@
 * Colors
 */
 
-$menu-bg: #1b1b23;
-$menu-color: #e9ebef;
-
-$red: #d9392d;
-$blue: #2d72d9;
-$mediumblue: #1c52a2;
-$darkblue: #092754;
+$mediumblue: #1B66FF;
+$darkblue: #304FFE;
+$blue: #448AFF;
 $green: #2dc273;
-$orange: #f1a815;
+$orange: #FF7C4F;
 
 $light-gray: #bbc2cc;
 $dark-gray: #9ca4b2;
 
-$nav-bg-1: $blue;
-$nav-font-1: $darkblue;
-$nav-font-2: $mediumblue;
+$nav-border: #e0e0e0;
+$nav-bg: rgb(244,244,244);
+$nav-color: #5f6a7d;
+$nav-color-hover: lighten($nav-color, 10%);
+$nav-height: 4rem;
 
 $bullet-color: $blue;
 
@@ -28,17 +26,30 @@ $bg-3: darken($bg-1, 10%);
 $bg-4:darken($bg-1, 30%);
 $bg-5: $dark-gray;
 
-/*
-* Typography
-*/
-$font1: 'Noto Sans', sans-serif;
-$font2: 'Lora', serif;
+// Typography
 
-$font-weight: 400;
+@font-face {
+    font-family: 'brandon_grotesque_regular';
+    src: url('../../assets/fonts/brandon_reg-webfont.eot');
+    src: url('../../assets/fonts/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../assets/fonts/brandon_reg-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/brandon_reg-webfont.woff') format('woff'),
+         url('../../assets/fonts/brandon_reg-webfont.ttf') format('truetype'),
+         url('../../assets/fonts/brandon_reg-webfont.svg#brandon_grotesque_regularRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-$header-color      : #121821;
-$body-color        : #2b3442;
+}
 
+
+$font1:  'Merriweather', serif;
+$font2: brandon_grotesque_regular, sans-serif;
+
+$font-weight1: 400;
+$font-weight2: 400;
+
+$header-color      : #222A2C;
+$body-color        : #3b4553;
 $color-link        : $blue;
 $color-link-hover  : darken($color-link, 10%);
 
@@ -53,7 +64,6 @@ $XL                : 50rem;//(900px)
 $XXL               : 61.11rem;   //(1100px)
 
 $gutter            : 2rem;
-$nav-height     : 4rem;
 
 $social-colors: (
 dribbble           : #ea4c89,
@@ -73,3 +83,92 @@ navigation-rainbow : 60,
 share-type         : 50,
 share              : 40
 );
+
+
+@-webkit-keyframes zoomit {
+    15%,40%,75%,100% {
+        -webkit-transform-origin: center center;
+    }
+
+    15% {
+        -webkit-transform: scale(1.2, 1.1);
+    }
+
+    40% {
+        -webkit-transform: scale(0.95, 0.95);
+    }
+
+    75% {
+        -webkit-transform: scale(1.05, 1);
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+@-moz-keyframes zoomit {
+    15%,40%,75%,100% {
+        -moz-transform-origin: center center;
+    }
+
+    15% {
+        -moz-transform: scale(1.2, 1.1);
+    }
+
+    40% {
+        -moz-transform: scale(0.95, 0.95);
+    }
+
+    75% {
+        -moz-transform: scale(1.05, 1);
+    }
+
+    100% {
+        -moz-transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes zoomitbig {
+    15%,40%,75%,100% {
+        -webkit-transform-origin: center center;
+    }
+
+    15% {
+        -webkit-transform: scale(1.4, 1.2);
+    }
+
+    40% {
+        -webkit-transform: scale(0.9, 0.9);
+    }
+
+    75% {
+        -webkit-transform: scale(1.08, 1);
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+@-moz-keyframes zoomitbig {
+    15%,40%,75%,100% {
+        -moz-transform-origin: center center;
+    }
+
+    15% {
+        -moz-transform: scale(1.4, 1.2);
+    }
+
+    40% {
+        -moz-transform: scale(0.9, 0.9);
+    }
+
+    75% {
+        -moz-transform: scale(1.08, 1);
+    }
+
+    100% {
+        -moz-transform: scale(1, 1);
+    }
+}
