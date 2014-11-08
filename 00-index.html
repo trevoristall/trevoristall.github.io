@@ -9,59 +9,59 @@ group: "navigation"
 
 
 <header class="masthead">
-  <div class="content-container">
+    <div class="content-container">
 
-    <div class="caption">
-      <h1>My name is <span>Trevor Allen</span>. I'm a web designer and developer in Asheville, NC.</h1>
+        <div class="caption">
+            <h1>My name is <span>Trevor Allen</span>. I'm a web designer and developer in Asheville, NC.</h1>
+        </div>
     </div>
-  </div>
 </header>
 
 <div class="content-container">
 
-  <div class="grid">
-    <h3>Featured Work</h3>
+    <div class="grid">
+        <h3>Featured Work</h3>
 
-    <figure class="repeat item-0">
-        <a href="/cakesbyjane.html">
-            <img src="images/cakesbyjane_thumb.jpg" alt="Custom Websites" />
-            <figcaption>
-                <p>Cakes by Jane</p>
-            </figcaption>
-        </a>
-    </figure>
+        <figure class="repeat item-0">
+            <a href="/cakesbyjane.html">
+                <img src="images/cakesbyjane_thumb.jpg" alt="Custom Websites" />
+                <figcaption>
+                    <p>Cakes by Jane</p>
+                </figcaption>
+            </a>
+        </figure>
 
-    <figure class="repeat item-1">
-      <a href="/morespaceplace.html">
-        <img src="images/morespaceplace_thumb.jpg" alt="Custom Design"/>
-        <figcaption>
-          <p>More Space Place</p>
-        </figcaption>
-      </a>
-    </figure>
+        <figure class="repeat item-1">
+            <a href="/morespaceplace.html">
+                <img src="images/morespaceplace_thumb.jpg" alt="Custom Design"/>
+                <figcaption>
+                    <p>More Space Place</p>
+                </figcaption>
+            </a>
+        </figure>
 
-    <figure class="repeat item-2">
-      <a href="/logos.html">
-        <img src="images/logo_thumb.jpg" alt="web design" />
-        <figcaption>
-          <p>Logo Design</p>
-        </figcaption>
-      </a>
-    </figure>
+        <figure class="repeat item-2">
+            <a href="/logos.html">
+                <img src="images/logo_thumb.jpg" alt="web design" />
+                <figcaption>
+                    <p>Logo Design</p>
+                </figcaption>
+            </a>
+        </figure>
 
-  </div>
-  <blockquote><p>I appreciate the promptness, professionalism and service. I will recommend your web design talent to others and will come back if I need something else done!</p><br><p>-KT</p></blockquote>
+    </div>
+    <blockquote><p>I appreciate the promptness, professionalism and service. I will recommend your web design talent to others and will come back if I need something else done!</p><br><p>-KT</p></blockquote>
 
-  <ul class="post-list">
-    <h3>Recent Posts</h3>
-    {% for post in site.posts limit:3 %}
-    <li>
-      <h4>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h4>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-    </li>
-    {% endfor %}
-  </ul>
+    <ul class="post-list">
+        <h3>Recent Posts</h3>
+        {% for post in site.posts limit:3 %}
+        <li>
+            <h4>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h4>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </li>
+        {% endfor %}
+    </ul>
 
 </div>
