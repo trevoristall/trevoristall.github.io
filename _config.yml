@@ -9,10 +9,6 @@ url: "http://www.mynameistrevor.com" # the base hostname & protocol for your sit
 twitter_username: trevoristall
 github_username:  trevoristall
 
-#exclude: [scripts/]
-#source: doc/
-#destination: app/
-
 # Build settings
 markdown: kramdown
 
