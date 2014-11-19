@@ -780,6 +780,6 @@ return function (global, window, document, undefined) {
 }));
 
 </script>
-	<script src="{{ site.url }}/assets/js/app.js"></script>
+	<script src="{{ site.url }}/assets/js/app.js?bust={{ site.time | date_to_xmlschema | cgi_escape }}"></script>
 </body>
 </html>
