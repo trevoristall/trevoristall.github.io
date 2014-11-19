@@ -2,7 +2,9 @@
 layout: post
 title:  "GulpJS"
 date:   2014-11-06 8:02:00
-categories: "web, javascript, ui/ux, design, gulpjs, node, npm"
+categories:
+- blog
+permalink: blog/gulpjs
 ---
 
 Working on websites regularly leaves you needing certain things automated from time to time. Scripts minified and concatenated, Scss compiled autoprefixed and minified, code linted and built for production.

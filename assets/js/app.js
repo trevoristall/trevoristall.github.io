@@ -1,13 +1,25 @@
 (function() {
 
     'use strict';
-    var doc = document,
-        // body = doc.querySelectorAll("body"),
-        form = doc.querySelectorAll("form *"),
-        figure = doc.querySelectorAll("figure"),
-        profile = doc.querySelectorAll(".profile-image img"),
-        header = doc.querySelectorAll(".masthead h1");
 
+    var win = window,
+        doc = win.document,
+        $Q = doc.querySelector.bind(doc),
+        body = $Q(doc.body),
+        form = $Q('form *'),
+        figure = $Q('figure'),
+        profile = $Q('.profile-image img'),
+        header = $Q('.masthead h1'),
+        path = win.location.pathname.split('/')[1].split('.')[0] || '/',
+        pageCheck = function(string) {
+            if (path !== string) {
+                return false;
+            }
+            if (path === '/') {
+                path = 'home';
+            }
+            return true;
+        };
 
 
     if (!Modernizr.svg) {
@@ -15,14 +27,11 @@
             return $(this).attr('src').replace('.svg', '.png');
         });
     }
+    
 
-    //$('.contact-form').find('input, textarea, label').
     Velocity(form, 'transition.slideLeftBigIn', {stagger: 125, drag: true});
-    // $('.masthead').find('h1').
     Velocity(header, 'transition.slideUpBigIn', {duration: 500});
-    // $('.grid').find("figure")
     Velocity(figure, 'transition.slideLeftBigIn', {stagger: 150, drag: true});
-    // $('.profile-image').find('img').
     Velocity(profile, 'transition.slideDownBigIn', {duration: 600});
 
 }());
