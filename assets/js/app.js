@@ -4,11 +4,11 @@
 
     var win = window,
         doc = document,
-        Q = doc.querySelector.bind(doc),
+        Q = doc.querySelectorAll.bind(doc),
         body = doc.body,
 
 
-        
+
         form = Q('form *'),
         figure = Q('figure'),
         profile = Q('.profile-image img'),
@@ -33,8 +33,8 @@
 
 
     Velocity(form, 'transition.slideLeftBigIn', {stagger: 125, drag: true});
-    Velocity(header, 'transition.slideUpBigIn', {duration: 500});
+    Velocity(header, 'transition.slideUpBigIn', {duration: 1000});
     Velocity(figure, 'transition.slideLeftBigIn', {stagger: 150, drag: true});
-    Velocity(profile, 'transition.slideDownBigIn', {duration: 600});
+    Velocity(profile, 'transition.slideDownBigIn', {duration: 1000});
 
 }());
