@@ -3,30 +3,9 @@
 }
 
 .about-me {
-    .content-container {
-        margin-top: 2rem;
-    }
     .masthead {
         background:url(/images/about_header.jpg) no-repeat center 25%;
         z-index: -1;
-        .profile-image {
-            position: absolute;
-            bottom: -4rem;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 8rem;
-            height: 8rem;
-            img {
-                opacity: 0;
-                display: block;
-                margin: 0 auto;
-                width: 100%;
-                height: auto;
-                border-radius: 100%;
-                border: .4rem solid #e9ebef;
-            }
-        }
     }
 }
 

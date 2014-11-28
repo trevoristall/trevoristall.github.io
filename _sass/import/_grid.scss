@@ -1,6 +1,6 @@
 .content-container {
   min-height: 100%;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   padding: 3rem 1rem;
   @include rem-fallback(max-width, $L);
   @include rem-fallback(padding, 3, 1);
