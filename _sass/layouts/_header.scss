@@ -10,7 +10,7 @@
     height: $XS;
     height: 80vh;
     width: 100%;
-    background: url(/images/front_header.jpg) no-repeat center 25%;
+    background: url(/images/trianglify-background.svg) no-repeat center 25%;
     background-attachment: scroll;
     background-size: cover;
     position: relative;
@@ -30,7 +30,7 @@
         }
         h1 {
             opacity: 0;
-            color: white;
+            color: $nav-color;
             font-size: 1.5rem;
             text-align: right;
             @include breakpoint($M) {
