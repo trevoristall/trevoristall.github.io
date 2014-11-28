@@ -4,37 +4,30 @@
 
     var win = window,
         doc = document,
-        Q = doc.querySelectorAll.bind(doc),
+        q = doc.querySelectorAll.bind(doc),
         body = doc.body,
+        form = q('form *'),
+        figure = q('figure'),
+        profile = q('.profile-image img'),
+        header = q('.masthead h1'),
+        links = q('.main-nav a');
 
-
-
-        form = Q('form *'),
-        figure = Q('figure'),
-        profile = Q('.profile-image img'),
-        header = Q('.masthead h1'),
-        path = win.location.pathname.split('/')[1].split('.')[0] || '/',
-        pageCheck = function(string) {
-            if (path !== string) {
-                return false;
-            }
-            if (path === '/') {
-                path = 'home';
-            }
-            return true;
+        links.onclick = function() {
+          if (event.metaKey || event.ctrlKey) {
+            return;
+          } else {
+            event.preventDefault(function(){
+              Velocity(body, 'transition.slideUpBigOut', {duration: 400});
+            });
+          }
         };
+        // allow command-click and control-click to open new tab
 
 
-    // if (!Modernizr.svg) {
-    //     $('img[src*="svg"]').attr('src', function () {
-    //         return $(this).attr('src').replace('.svg', '.png');
-    //     });
-    // }
-
-
-    Velocity(form, 'transition.slideLeftBigIn', {stagger: 125, drag: true});
-    Velocity(header, 'transition.slideUpBigIn', {duration: 1000});
-    Velocity(figure, 'transition.slideLeftBigIn', {stagger: 150, drag: true});
-    Velocity(profile, 'transition.slideDownBigIn', {duration: 1000});
+    Velocity(body, 'transition.slideUpBigIn', {duration: 400});
+    Velocity(form, 'transition.slideLeftBigIn', { delay: 400, stagger: 125, drag: true});
+    Velocity(header, 'transition.slideUpBigIn', { delay: 400, duration: 1000});
+    Velocity(figure, 'transition.slideLeftBigIn', { delay: 400, stagger: 150, drag: true});
+    Velocity(profile, 'transition.slideDownBigIn', { delay: 400, duration: 1000});
 
 }());
