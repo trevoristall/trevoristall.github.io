@@ -161,5 +161,32 @@
                 clear: both;
             }
         }
+        .item-7 {
+          @include grid-span(6, 1);
+          clear: right;
+          @include breakpoint($M) {
+            @include grid-span(4, 5);
+
+          }
+        }
+        .item-8 {
+          @include grid-span(6, 7);
+          clear: right;
+          @include breakpoint($M) {
+            @include grid-span(4, 9);
+
+          }
+        }
+        .item-9 {
+          @include grid-span(6, 7);
+          @media all and (max-width: $M) {
+            clear: right;
+          }
+
+          @include breakpoint($M) {
+            @include grid-span(4, 1);
+            clear: both;
+          }
+        }
     }
 }
