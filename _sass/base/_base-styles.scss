@@ -1,12 +1,12 @@
 html, body {
-    height: 100%;
-    width: 100%;
-    min-height: 100%;
-    min-width: 100%;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 html {
-    font-size: 112.5%;
+  font-size: 112.5%;
 }
 
 @-webkit-keyframes pageLoad {
@@ -41,117 +41,115 @@ html {
 }
 
 body {
-    font-family: $font1;
-    color: $body-color;
-    font-weight: $font-weight1;
-    font-size: 1rem;
-    line-height: 1.618;//golden ratio
-    background: $bg-1;
-    -webkit-font-smoothing: antialiased;
-    -webkit-animation-name: pageLoad;
-    -webkit-transition-timing-function: ease-in-out;
-    -moz-animation-name: pageLoad;
-    -moz-transition-timing-function: ease-in-out;
-    -webkit-animation-duration: .25s;
-    -moz-animation-duration: .25s;
-    animation-duration: .25s;
-    animation-name: pageLoad;
-    transition-timing-function: ease-in-out;
+  font-family: $font1;
+  color: $body-color;
+  font-weight: $font-weight1;
+  font-size: 1rem;
+  line-height: 1.618;//golden ratio
+  background: $bg-1;
+  -webkit-font-smoothing: antialiased;
+  -webkit-animation-name: pageLoad;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-animation-name: pageLoad;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-animation-duration: .25s;
+  -moz-animation-duration: .25s;
+  animation-duration: .25s;
+  animation-name: pageLoad;
+  transition-timing-function: ease-in-out;
 }
 
 p {
-    margin-bottom: 1.3rem;
+  margin-bottom: 1.3rem;
 }
 
 em {
-    font-style: italic;
-
+  font-style: italic;
 }
 
-
 a {
+  color: $color-link;
+  text-decoration: none;
+  @include single-transition(color, .3s, ease-in-out);
+  &:visited {
     color: $color-link;
-    text-decoration: none;
-    @include single-transition(color, .3s, ease-in-out);
-    &:visited {
-        color: $color-link;
-    }
-    &:hover {
-        color: $color-link-hover;
-    }
+  }
+  &:hover {
+    color: $color-link-hover;
+  }
 }
 
 h1,
 h2,
 h3,
 h4, {
-    font-family: $font2;
-    margin: 0 0 0.5em;
-    line-height: 1.2;
-    color: $header-color;
-    text-align: center;
-    font-weight: $font-weight2;
+  font-family: $font2;
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+  color: $header-color;
+  text-align: center;
+  font-weight: $font-weight2;
 }
 
 h1 {
-    font-size: 3.998rem;
+  font-size: 3.998rem;
 }
 h2 {
-    font-size: 2.827rem;
+  font-size: 2.827rem;
 }
 h3 {
-    font-size: 1.999rem;
+  font-size: 1.999rem;
 }
 h4 {
-    font-size: 1.414rem;
-    font-weight: 300;
-    color: $dark-gray;
+  font-size: 1.414rem;
+  font-weight: 300;
+  color: $dark-gray;
 }
 
 blockquote {
-    background: white;
-    border-left: 10px solid $blue;
-    margin: 1.5rem 10px;
-    padding: 1.5rem 10px;
-    quotes: "\201C""\201D""\2018""\2019";
+  background: white;
+  border-left: 10px solid $blue;
+  margin: 1.5rem 10px;
+  padding: 1.5rem 10px;
+  quotes: "\201C""\201D""\2018""\2019";
 
-    &:before {
-        color: $dark-gray;
-        content: open-quote;
-        font-size: 4em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em;
-    }
-    p {
-        display: inline;
-    }
+  &:before {
+    color: $dark-gray;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  p {
+    display: inline;
+  }
 }
 
 ::-moz-selection {
-    background: $body-color;
-    color: #fff;
-    text-shadow: none;
+  background: $body-color;
+  color: #fff;
+  text-shadow: none;
 }
 ::selection {
-    background: $body-color;
-    color: #fff;
-    text-shadow: none;
+  background: $body-color;
+  color: #fff;
+  text-shadow: none;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }

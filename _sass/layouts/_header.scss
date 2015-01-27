@@ -1,65 +1,65 @@
 .no-js body .masthead .caption h1 {
-    opacity: 1;
+  opacity: 1;
 }
 
 .masthead {
-    height: $XS;
-    height: 40vh;
-    width: 100%;
-    background: url(/images/trianglify-background.svg) no-repeat center 25%;
-    background-attachment: scroll;
-    background-size: cover;
-    position: relative;
+  height: $XS;
+  height: 40vh;
+  width: 100%;
+  background: url(/images/trianglify-background.svg) no-repeat center center;
+  background-attachment: scroll;
+  background-size: cover;
+  position: relative;
+  @include breakpoint($L) {
+    height: $S;
+    height: 60vh;
+  }
+  .content-container {
+    margin-top: 0;
+  }
+  .profile-image {
+    position: absolute;
+    bottom: -4rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 8rem;
+    height: 8rem;
+    img {
+      opacity: 0;
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      border-radius: 100%;
+      border: .4rem solid #e9ebef;
+    }
+  }
+  .caption {
+    @include grid-span(7,5);
+    @include breakpoint($M) {
+      @include grid-span(9,3);
+      margin-top: 2rem;
+    }
     @include breakpoint($L) {
-        height: $S;
-        height: 60vh;
+      margin-top: 3rem;
+
     }
-    .content-container {
-      margin-top: 0;
-    }
-    .profile-image {
-      position: absolute;
-      bottom: -4rem;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 8rem;
-      height: 8rem;
-      img {
-        opacity: 0;
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-        border-radius: 100%;
-        border: .4rem solid #e9ebef;
+    h1 {
+      opacity: 0;
+      color: $nav-color;
+      font-size: 1.5rem;
+      text-align: right;
+      @include breakpoint($M) {
+        font-size: 2rem;
+      }
+      @include breakpoint($XL) {
+        font-size: 2.5rem;
+      }
+      span {
+        color: $blue;
+        white-space: nowrap;
       }
     }
-    .caption {
-        @include grid-span(7,5);
-        @include breakpoint($M) {
-            @include grid-span(9,3);
-            margin-top: 2rem;
-        }
-        @include breakpoint($L) {
-            margin-top: 3rem;
-
-        }
-        h1 {
-            opacity: 0;
-            color: $nav-color;
-            font-size: 1.5rem;
-            text-align: right;
-            @include breakpoint($M) {
-                font-size: 2rem;
-            }
-            @include breakpoint($XL) {
-                font-size: 2.5rem;
-            }
-            span {
-                color: $blue;
-                white-space: nowrap;
-            }
-        }
-    }
+  }
 }

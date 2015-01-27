@@ -1,65 +1,68 @@
 .no-js .masthead .profile-image img {
-    opacity: 1;
+  opacity: 1;
 }
 
 .about-me {
-    .masthead {
-        background:url(/images/about_header.jpg) no-repeat center 25%;
-        z-index: -1;
-    }
+  .masthead {
+    background:url(/images/about_header.jpg) no-repeat center center;
+    background-attachment: scroll;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+  }
 }
 
 .profiles {
-    list-style-type: none;
-    text-align: center;
-    .profile {
-        display: inline-block;
-        margin: 0 15px 15px 15px;
-        a {
-            -moz-transform: scale(1);
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -moz-transform: translate3d(0,0,0);
-            -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-            -moz-backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-        a:hover {
-            -moz-animation: zoomitbig .3s ease-out;
-            -webkit-animation: zoomitbig .3s ease-out;
-            animation: zoomitbig .3s ease-out;
-        }
+  list-style-type: none;
+  text-align: center;
+  .profile {
+    display: inline-block;
+    margin: 0 15px 15px 15px;
+    a {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -moz-transform: translate3d(0,0,0);
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
-    .github a {
-        color: #333333;
-        &:hover {
-            color: lighten(#333333, 10%);
-        }
+    a:hover {
+      -moz-animation: zoomitbig .3s ease-out;
+      -webkit-animation: zoomitbig .3s ease-out;
+      animation: zoomitbig .3s ease-out;
     }
-    .linkedin a {
-        color: #0878b5;
-        &:hover {
-            color: lighten(#0878b5, 10%);
-        }
+  }
+  .github a {
+    color: #333333;
+    &:hover {
+      color: lighten(#333333, 10%);
     }
-    .codepen a {
-        color: black;
-        &:hover {
-            color: lighten(black, 10%);
-        }
+  }
+  .linkedin a {
+    color: #0878b5;
+    &:hover {
+      color: lighten(#0878b5, 10%);
     }
-    .twitter a {
-        color: #55acee;
-        &:hover {
-            color: lighten(#55acee, 10%);
-        }
+  }
+  .codepen a {
+    color: black;
+    &:hover {
+      color: lighten(black, 10%);
     }
-    .email a {
-        color: #d34937;
-        &:hover {
-            color: lighten(#d34937, 10%);
-        }
+  }
+  .twitter a {
+    color: #55acee;
+    &:hover {
+      color: lighten(#55acee, 10%);
     }
+  }
+  .email a {
+    color: #d34937;
+    &:hover {
+      color: lighten(#d34937, 10%);
+    }
+  }
 }
