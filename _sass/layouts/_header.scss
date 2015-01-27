@@ -4,7 +4,7 @@
 
 .masthead {
     height: $XS;
-    height: 80vh;
+    height: 40vh;
     width: 100%;
     background: url(/images/trianglify-background.svg) no-repeat center 25%;
     background-attachment: scroll;
@@ -12,7 +12,7 @@
     position: relative;
     @include breakpoint($L) {
         height: $S;
-        height: 80vh;
+        height: 60vh;
     }
     .content-container {
       margin-top: 0;
@@ -36,10 +36,10 @@
       }
     }
     .caption {
-        margin-top: 2rem;
         @include grid-span(7,5);
         @include breakpoint($M) {
             @include grid-span(9,3);
+            margin-top: 2rem;
         }
         @include breakpoint($L) {
             margin-top: 3rem;
