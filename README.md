@@ -1,5 +1,5 @@
-treall.github.io
-================
+trevoristall.github.io
+======================
 
 ##My personal portfolio
 
