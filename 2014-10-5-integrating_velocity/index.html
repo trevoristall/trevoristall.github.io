@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Integrating VelocityJS | Trevor Allen</title>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+
+	<meta name="author" content="">
+  <meta name="description" content="">
+
+	<meta name="description" content="Seeing recent trends with animation and how they increase overall esthetic and engagement is really cool. I love that the web is finally reaching a stage where animations and content live together nat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integrating VelocityJS">
+<meta property="og:url" content="http://mynameistrevor.com/2014-10-5-integrating_velocity/index.html">
+<meta property="og:site_name" content="Trevor Allen">
+<meta property="og:description" content="Seeing recent trends with animation and how they increase overall esthetic and engagement is really cool. I love that the web is finally reaching a stage where animations and content live together nat">
+<meta property="og:updated_time" content="2016-10-02T15:11:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Integrating VelocityJS">
+<meta name="twitter:description" content="Seeing recent trends with animation and how they increase overall esthetic and engagement is really cool. I love that the web is finally reaching a stage where animations and content live together nat">
+</head>
+
+<body>
+	<main>
+    <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="October 05 2014" itemprop="datePublished">October 05 2014</time></span>
+      <h1 itemprop="name headline">Integrating VelocityJS</h1>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p>Seeing recent trends with animation and how they increase overall esthetic and engagement is really cool. I love that the web is finally reaching a stage where animations and content live together natively.</p>
+<p>That said, I am not a huge fan of the work required to write large animation sequences in Sass/css.<br>Hover and other simple effects are easy and performant to implement and use, but everything else gets complex and unweildy very quickly.</p>
+<p>To solve this I’ve been using <a href="https://twitter.com/Shapiro" target="_blank" rel="external">Julian Shapiro’s</a> <a href="http://julian.com/research/velocity/" target="_blank" rel="external">VelocityJS</a> in all of my recent projects.</p>
+<p>One of the really great features of Velocity is that it is decoupled from other libraries, so you can use it with or without jQuery.(I used <a href="http://zeptojs.com/" target="_blank" rel="external">Zepto</a> on this site.) Having that much animation power in such a simple drop in syntax is really nice.</p>
+<p>Since there are plenty of demos using VelocityJS around the web (many of them conveniently on Julian’s <a href="http://codepen.io/julianshapiro/" target="_blank" rel="external">Codepen</a>) I am not going to go over demos. I will cover some use cases I’ve run into and places I would recommend avoiding use of Velocity in favor of sass/css.</p>
+<h3 id="Where-I-find-Velocity-particularly-useful"><a href="#Where-I-find-Velocity-particularly-useful" class="headerlink" title="Where I find Velocity particularly useful:"></a>Where I find Velocity particularly useful:</h3><hr>
+<ul>
+<li>Page load animations (slideDownBigIn, fadeIn etc…) Just don’t have animations that are long enough to slow down the apparent speed of your page.</li>
+</ul>
+<ul>
+<li>Task completion such as submitting a form, placing an order or clicking a call to action.</li>
+<li>Complex multi part animations (Multiple elements doing several things at specific intervals)</li>
+</ul>
+<ul>
+<li>Callouts and items that will conditionally need to be animated (missed form fields, important information/links etc…)</li>
+</ul>
+<h3 id="Where-I-find-velocity-is-unnecessary"><a href="#Where-I-find-velocity-is-unnecessary" class="headerlink" title="Where I find velocity is unnecessary:"></a>Where I find velocity is unnecessary:</h3><hr>
+<ul>
+<li>Hover animations. Generally are easy to accomplish in css and shouldn’t be overly complex anyway.</li>
+<li>Animations that happen continually. Unless they are complex, css is probably better suited to this.</li>
+</ul>
+<p>I try to keep animations under 400ms(ideally &lt;300ms) from start to finish. Go over that and you start to adversly affect user experience and it becomes an annoyance rather than a cool feature.</p>
+<p>Before you animate something, really consider if it’s actually adding anything or if you’re just doing it because you can. Weigh the possible benefits vs the potential hits to performance, whether or not it’s going to be “spammy” (happening very frequently and becoming an annoyance) or any other negative factors. The golden rule here is usually “Less is more”.</p>
+
+  </section>
+
+</article>
+
+
+  
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'trevoristall';
+  
+  var disqus_url = 'http://mynameistrevor.com/2014-10-5-integrating_velocity/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  
+
+	</main>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script src="/js/app.js"></script>
+</body>
+</html>
