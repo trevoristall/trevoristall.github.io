@@ -109,7 +109,7 @@ ol, ul {
 /**
  * Letter Spacing
  */
-* Tabs .tabs, .previews__container span, .preview__more, .card__more, .pagination, .nav, .next__container span, .archives__header {
+.previews__container span, .preview__more, .card__more, .pagination, .next__container span, .archives__header {
   font-family: "Merriweather", serif;
   letter-spacing: 0.05em;
   text-transform: uppercase; }
@@ -178,17 +178,19 @@ ol, ul {
 * Blog Post Preview
 * On the Blog page
 */
-.previews__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  padding: 2em;
-  color: white; }
-  .previews__container span {
-    font-family: "Open Sans", sans-serif; }
+.previews {
+  padding: 0; }
+  .previews__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 2em;
+    color: white; }
+    .previews__container span {
+      font-family: "Open Sans", sans-serif; }
 
 .preview {
   transition: background-color 0.2s ease-in-out; }
@@ -353,24 +355,17 @@ ol, ul {
 * Navigation
 */
 .nav {
-  position: absolute;
-  top: 1.25em;
-  left: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 1em;
   z-index: 99;
   display: flex;
-  align-items: center;
-  font-family: "Open Sans", sans-serif; }
-  @media (min-width: 30em) {
-    .nav {
-      left: 2em; } }
-  @media (min-width: 30em) {
-    .nav i {
-      margin-right: 0.5em; } }
-  .nav span {
-    display: none; }
-    @media (min-width: 30em) {
-      .nav span {
-        display: block; } }
+  align-items: center; }
+  .nav ul > li {
+    flex-wrap: nowrap; }
   .nav--black {
     color: #30343F; }
     .nav--black:hover, .nav--black:active, .nav--black:focus {
