@@ -65,7 +65,6 @@ figure {
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%; }
 
 ol, ul {
@@ -103,8 +102,32 @@ ol, ul {
 .bg-white {
   background-color: white; }
 
+.bg-alpha {
+  background-color: #273469; }
+
+.c-white {
+  color: white; }
+
 .tac {
   text-align: center; }
+
+.fr {
+  float: right; }
+
+.fl {
+  float: left; }
+
+.p4 {
+  padding: 2em; }
+
+.mb4 {
+  margin-bottom: 2em; }
+
+.mr4 {
+  margin-right: 2em; }
+
+.ml4 {
+  margin-left: 2em; }
 
 /**
  * Letter Spacing
@@ -547,12 +570,31 @@ section {
 .fa-paper-plane {
   color: #273469; }
 
+.button {
+  background: #5DD39E;
+  color: white;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  margin: .5em 0;
+  display: inline-block;
+  will-change: background, color;
+  transition: color .3s ease, background .3s ease; }
+  .button:hover, .button:active {
+    background: #85deb6;
+    color: white; }
+
 .delay {
   animation-delay: .1s; }
   .delay2 {
     animation-delay: .2s; }
   .delay3 {
     animation-delay: .3s; }
+  .delay4 {
+    animation-delay: .4s; }
+  .delay5 {
+    animation-delay: .5s; }
 
 /*!
  * animate.css -http://daneden.me/animate
