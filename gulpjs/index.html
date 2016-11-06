@@ -4,22 +4,22 @@
   <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How to Win Friends and Influence People | Trevor Allen</title>
+  <title>GulpJS | Trevor Allen</title>
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/app.css">
 	<meta name="author" content="">
   <meta name="description" content="">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
-	<meta name="description" content="Since starting my new job at Knucklepuck Media in December, we’ve had a weekly book club where we discuss what we’re reading and anything that’s come up recently related to it. Dale Carnegie’s “How to">
+	<meta name="description" content="Working on websites regularly leaves you needing certain things automated from time to time. Scripts minified and concatenated, Scss compiled autoprefixed and minified, code linted and built for produ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to Win Friends and Influence People">
-<meta property="og:url" content="http://mynameistrevor.com/2016-02-24-how-to-win-friends-influence-people/index.html">
+<meta property="og:title" content="GulpJS">
+<meta property="og:url" content="http://mynameistrevor.com/gulpjs/index.html">
 <meta property="og:site_name" content="Trevor Allen">
-<meta property="og:description" content="Since starting my new job at Knucklepuck Media in December, we’ve had a weekly book club where we discuss what we’re reading and anything that’s come up recently related to it. Dale Carnegie’s “How to">
-<meta property="og:updated_time" content="2016-10-22T00:19:28.000Z">
+<meta property="og:description" content="Working on websites regularly leaves you needing certain things automated from time to time. Scripts minified and concatenated, Scss compiled autoprefixed and minified, code linted and built for produ">
+<meta property="og:updated_time" content="2016-10-22T00:26:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to Win Friends and Influence People">
-<meta name="twitter:description" content="Since starting my new job at Knucklepuck Media in December, we’ve had a weekly book club where we discuss what we’re reading and anything that’s come up recently related to it. Dale Carnegie’s “How to">
+<meta name="twitter:title" content="GulpJS">
+<meta name="twitter:description" content="Working on websites regularly leaves you needing certain things automated from time to time. Scripts minified and concatenated, Scss compiled autoprefixed and minified, code linted and built for produ">
 </head>
 
 <body>
@@ -65,18 +65,18 @@
     <a href="/"> <i class="fa fa-lg fa-arrow-left"></i><span>Back to Posts</span></a>
     <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
     <div class="mast__container">
-      <span><time datetime="February 24 2016" itemprop="datePublished">February 24 2016</time></span>
-      <h1 itemprop="name headline">How to Win Friends and Influence People</h1>
+      <span><time datetime="November 06 2014" itemprop="datePublished">November 06 2014</time></span>
+      <h1 itemprop="name headline">GulpJS</h1>
       <span></span>
     </div>
   </header>
 
   <section class="section-padding post" itemprop="articleBody">
-    <p>Since starting my new job at Knucklepuck Media in December, we’ve had a weekly book club where we discuss what we’re reading and anything that’s come up recently related to it. Dale Carnegie’s “How to Win Friends &amp; Influence People” is what we’re working on now.</p>
-<p>I really like this book, a lot of what’s discussed seems obvious but it’s really nice to have someone remind you once in a while. The fact that this is still a bestselling book is testament to just how relevant the content is.</p>
-<p>The premise is simple: be kind to others, listen to what’s said and carefully consider their point of view. Admit your own faults quickly and ask questions instead of commanding. Lead by example with encouragement and  praise.</p>
-<p>On a personal level, I regularly fail to do many of these things. Being reminded by such a thoughtful and well written book is not only good for day-to-day life but also helps set a precedent for myself going forward.</p>
-<blockquote>“The world is full of people who are grabbing and self-seeking. So the rare individual who unselfishly tries to serve others has an enormous advantage. He has little competition.”</blockquote>
+    <p>Working on websites regularly leaves you needing certain things automated from time to time. Scripts minified and concatenated, Scss compiled autoprefixed and minified, code linted and built for production.</p>
+<p>Our team at <a href="http://www.thewiredmouse.com/" target="_blank" rel="external">The Wired Mouse</a> had been using the default tools included with the <a href="https://www.drupal.org/project/omega" target="_blank" rel="external">Omega 4</a> starter theme. While it does get the job done, much of it is extremely slow and cumbersome when compared to the task runners of today, namely <a href="http://gulpjs.com/" target="_blank" rel="external">GulpJS</a>. Gulp is great because you can write a simple package.json to cover all of your dependencies, and all of your tasks are written in simple Javascript.</p>
+<hr>
+<p>After several months lamenting over the sad state of our build system I was finally able to take some time and get a basic Gulpfile set up.<br>In that short amount of time I was able to completely remove our dependency on <a href="http://compass-style.org/" target="_blank" rel="external">Compass</a>, have all of our scripts concatenated, tested and minified into one master file and set up a watch task to recompile everything whenever a change is detected.</p>
+<p>I am hoping to add <a href="http://www.browsersync.io/" target="_blank" rel="external">Browsersync</a> soon and <a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external">Gulp-sass</a> when <a href="http://libsass.org/" target="_blank" rel="external">LibSass</a> reaches feature parity with the Ruby based Sass branch.</p>
 
   </section>
 
@@ -94,7 +94,7 @@
 <script>
   var disqus_shortname = 'mynameistrevor-com';
   
-  var disqus_url = 'http://mynameistrevor.com/2016-02-24-how-to-win-friends-influence-people/';
+  var disqus_url = 'http://mynameistrevor.com/gulpjs/';
   
   (function(){
     var dsq = document.createElement('script');
