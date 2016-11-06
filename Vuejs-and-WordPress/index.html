@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vue.js and WordPress | Trevor Allen</title>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+	<meta name="author" content="">
+  <meta name="description" content="">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+	<meta name="description" content="I recently had the opportunity to use Vue.js in one of the backend WordPress plugins I was creating. I’ve used both React and Angular in past projects but I wanted something lightweight and quick to s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue.js and WordPress">
+<meta property="og:url" content="http://mynameistrevor.com/Vuejs-and-WordPress/index.html">
+<meta property="og:site_name" content="Trevor Allen">
+<meta property="og:description" content="I recently had the opportunity to use Vue.js in one of the backend WordPress plugins I was creating. I’ve used both React and Angular in past projects but I wanted something lightweight and quick to s">
+<meta property="og:updated_time" content="2016-11-06T23:25:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue.js and WordPress">
+<meta name="twitter:description" content="I recently had the opportunity to use Vue.js in one of the backend WordPress plugins I was creating. I’ve used both React and Angular in past projects but I wanted something lightweight and quick to s">
+</head>
+
+<body>
+	<nav class="nav row">
+	<ul class="col-xs-12 col-sm-6">
+		<div class="row center-xs start-sm">
+			
+				<li class="col-xs-2">
+				
+						<a class="tabs__item" href="/.">home</a>
+						
+						</li>
+						
+				<li class="col-xs-2">
+				
+						<a class="tabs__item" href="/about">about</a>
+						
+						</li>
+						
+				<li class="col-xs-2">
+				
+						<a class="tabs__item" href="/portfolio">portfolio</a>
+						
+						</li>
+						
+					</div>
+				</ul>
+				<ul class="col-xs-12 col-sm-6 tac">
+					<div class="row center-xs end-sm">
+						<li class="col-xs-1"><a href="https://github.com/trevoristall"><i class="fa fa-github"  aria-hidden="true"></i></a></li>
+						<li class="col-xs-1"><a href="https://twitter.com/trevoristall"><i class="fa fa-twitter"  aria-hidden="true"></i></a></li>
+						<li class="col-xs-1"><a href="https://www.linkedin.com/in/trevoristall"><i class="fa fa-linkedin"  aria-hidden="true"></i></a></li>
+						<li class="col-xs-1"><a href="https://codepen.io/trevoristall"><i class="fa fa-codepen"  aria-hidden="true"></i></a></li>
+						<li class="col-xs-1"><a href="mailto:trevoristall@gmail.com"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</nav>
+
+
+	<main>
+    <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="section-padding--lg mast">
+    <a href="/"> <i class="fa fa-lg fa-arrow-left"></i><span>Back to Posts</span></a>
+    <figure class="absolute-bg mast__img" style="background-image: url('/images/vue.jpg');"></figure>
+    <div class="mast__container">
+      <span><time datetime="November 06 2016" itemprop="datePublished">November 06 2016</time></span>
+      <h1 itemprop="name headline">Vue.js and WordPress</h1>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <p>I recently had the opportunity to use Vue.js in one of the backend WordPress plugins I was creating. I’ve used both React and Angular in past projects but I wanted something lightweight and quick to set up and use, Vue seemed like the perfect tool for the job.</p>
+<p>This plugin was being created to make it easier for content and SEO team members to view information about different posts/pages in the back-end of WordPress. They needed to be able to see the ID, Slug and Title of each post on the site and quickly sort through them. The default WordPress admin view for pages is incredibly slow and the search is not very accurate so I set out to improve it.</p>
+<p>To start out, I get the plugin initialized by adding our admin page. It’s important to namespace our plugin as well to prevent global scope pollution.</p>
+<figure class="highlight php"><figcaption><span>pageinfo.php</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span> <span class="keyword">namespace</span> <span class="title">PageInfo</span>;</div><div class="line"></div><div class="line"><span class="comment">// We can pass add_action a closure instead of passing it a function name.</span></div><div class="line">add_action(<span class="string">'admin_menu'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">  add_menu_page(</div><div class="line">    <span class="string">'All of the pageinfo'</span>,</div><div class="line">    <span class="string">'Pageinfo'</span>,</div><div class="line">    <span class="string">'edit_pages'</span>,</div><div class="line">    <span class="string">'pageinfo'</span>,</div><div class="line">    <span class="keyword">__NAMESPACE__</span>.<span class="string">'\\createAdminPage'</span>,</div><div class="line">    <span class="string">'dashicons-clipboard'</span>,</div><div class="line">    <span class="number">6</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><em>read more about what <a href="https://developer.wordpress.org/reference/functions/add_menu_page/" target="_blank" rel="external">add_menu_page()</a> does.</em></p>
+<p>This will create our page in the backend of WordPress and adds a link to it in the admin sidebar. Anyone with permission to edit pages can access it.</p>
+<p>Next, we need to set up the “createAdminPage()” function. We’ll use it to build the content of our page. To start with, we need to make a new WP_Query that will grab all of the posts and pages on the site.</p>
+<p>(In the future, I may just use the WordPress REST api to do this, since it saves a step.)</p>
+<figure class="highlight"><figcaption><span>pageinfo.php</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function createAdminPage() &#123;</div><div class="line">  ?&gt;&lt;div class="wrap"&gt;&lt;?php</div><div class="line"></div><div class="line">    /**</div><div class="line">    * This queries WordPress for every page and post.</div><div class="line">    * We need to use a '\' before WP_Query to tell php to use the global namespace, since that function does not exist in this scope.</div><div class="line">    */</div><div class="line">    $pageInfo = new \WP_Query([</div><div class="line">      'post_type' =&gt; [</div><div class="line">        'post',</div><div class="line">        'page'</div><div class="line">      ],</div><div class="line">      'posts_per_page' =&gt; -1,</div><div class="line">      'orderby' =&gt; 'ID',</div><div class="line">      'order' =&gt; 'ASC'</div><div class="line">    ]);</div></pre></td></tr></table></figure>
+<p><em>read more about <a href="http://www.phptherightway.com/#namespaces" target="_blank" rel="external">namespaces</a></em></p>
+<p>Now that we have that, we can create a new javascript object that contains all of those post’s data and get our Vue object initialized.</p>
+<figure class="highlight php"><figcaption><span>pageinfo.php</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js"</span>&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#pageInfo'</span>,</div><div class="line">  computed: &#123;</div><div class="line">    filteredPages: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> this.pages.filter(<span class="function"><span class="keyword">function</span><span class="params">(item)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> item.url.indexOf(this.searchQuery) &gt; <span class="number">-1</span>;</div><div class="line">      &#125;.bind(this));</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  data: &#123;</div><div class="line">    searchQuery: <span class="string">''</span>,</div><div class="line">    pages: [</div><div class="line">      <span class="meta">&lt;?php</span> <span class="keyword">if</span> ($pageInfo-&gt;have_posts()): <span class="keyword">while</span>($pageInfo-&gt;have_posts()):</div><div class="line">        $pageInfo-&gt;the_post();</div><div class="line">        $url = parse_url(get_the_permalink());</div><div class="line">        <span class="meta">?&gt;</span></div><div class="line">        &#123;</div><div class="line">          url: <span class="string">'&lt;?php echo $url['</span>path<span class="string">']; ?&gt;'</span>,</div><div class="line">          id: <span class="string">'&lt;?php the_ID(); ?&gt;'</span>,</div><div class="line">          title: <span class="string">'&lt;?php the_title(); ?&gt;'</span>,</div><div class="line">        &#125;,</div><div class="line">        <span class="meta">&lt;?php</span> <span class="keyword">endwhile</span>; <span class="keyword">endif</span>; <span class="meta">?&gt;</span></div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">  &lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>With this we can construct our view layout in html with Vue tags.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"pageInfo"</span> <span class="attr">style</span>=<span class="string">"margin: 0 auto;width: 80%; max-width: 1024px;"</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Pages &amp;amp; Posts<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">small</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span></div><div class="line">    This page shows all of the existing posts and pages in an easy to read format. You can also filter by the page url.</div><div class="line">  <span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">small</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"search"</span>&gt;</span>Filter<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"searchQuery"</span> <span class="attr">name</span>=<span class="string">"search"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-if</span>=<span class="string">"!filteredPages.length"</span>&gt;</span>No results, sorry<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; filteredPages.length &#125;&#125; result(s)<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">table</span> <span class="attr">style</span>=<span class="string">"margin: 2em 0;"</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span> <span class="attr">cellpadding</span>=<span class="string">"0"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>TITLE<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>URL<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>ID<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">tr</span> <span class="attr">v-for</span>=<span class="string">"page in filteredPages"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">v-html</span>=<span class="string">"page.title"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"page.url"</span>&gt;</span>&#123;&#123; page.url.slice(1).length &gt; 0 ? page.url.slice(1) : "home" &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123; page.id &#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Add it all together, and you get something like this (I’ve added a few css styles to clean it up)</p>
+<script src="//gist.github.com/44604a5a3aa63acef155cda7647ddbea.js?file=pageinfo.php"></script>
+<p>You can drop this plugin file into the wp-content/mu-plugins/ folder and forget about it.</p>
+
+  </section>
+
+</article>
+
+
+  
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'mynameistrevor-com';
+  
+  var disqus_url = 'http://mynameistrevor.com/Vuejs-and-WordPress/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  
+
+	</main>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+	<script src="/js/app.js"></script>
+</body>
+</html>
