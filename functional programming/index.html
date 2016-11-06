@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Functional Programming | Trevor Allen</title>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+	<meta name="author" content="">
+  <meta name="description" content="">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+	<meta name="description" content="Functional Programming in ES6Since I migrated one of the bigger projects at work to ES6, I’ve been more and more interested in functional programming and the idea of having little to no state mutati">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Functional Programming">
+<meta property="og:url" content="http://mynameistrevor.com/functional programming/index.html">
+<meta property="og:site_name" content="Trevor Allen">
+<meta property="og:description" content="Functional Programming in ES6Since I migrated one of the bigger projects at work to ES6, I’ve been more and more interested in functional programming and the idea of having little to no state mutati">
+<meta property="og:updated_time" content="2016-11-06T21:42:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Functional Programming">
+<meta name="twitter:description" content="Functional Programming in ES6Since I migrated one of the bigger projects at work to ES6, I’ve been more and more interested in functional programming and the idea of having little to no state mutati">
+</head>
+
+<body>
+	<nav class="nav row">
+	<ul class="col-xs-12 col-sm-6">
+		<div class="row center-xs start-sm">
+			
+				<li class="col-xs-2">
+				
+						<a class="tabs__item" href="/.">home</a>
+						
+						</li>
+						
+				<li class="col-xs-2">
+				
+						<a class="tabs__item" href="/about">about</a>
+						
+						</li>
+						
+				<li class="col-xs-2">
+				
+						<a class="tabs__item" href="/portfolio">portfolio</a>
+						
+						</li>
+						
+					</div>
+				</ul>
+				<ul class="col-xs-12 col-sm-6 tac">
+					<div class="row center-xs end-sm">
+						<li class="col-xs-1"><a href="https://github.com/trevoristall"><i class="fa fa-github"  aria-hidden="true"></i></a></li>
+						<li class="col-xs-1"><a href="https://twitter.com/trevoristall"><i class="fa fa-twitter"  aria-hidden="true"></i></a></li>
+						<li class="col-xs-1"><a href="https://www.linkedin.com/in/trevoristall"><i class="fa fa-linkedin"  aria-hidden="true"></i></a></li>
+						<li class="col-xs-1"><a href="https://codepen.io/trevoristall"><i class="fa fa-codepen"  aria-hidden="true"></i></a></li>
+						<li class="col-xs-1"><a href="mailto:trevoristall@gmail.com"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</nav>
+
+
+	<main>
+    <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="section-padding--lg mast">
+    <a class="" href="/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('');"></figure>
+    <div class="mast__container">
+      <span><time datetime="November 06 2016" itemprop="datePublished">November 06 2016</time></span>
+      <h1 itemprop="name headline">Functional Programming</h1>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h1 id="Functional-Programming-in-ES6"><a href="#Functional-Programming-in-ES6" class="headerlink" title="Functional Programming in ES6"></a>Functional Programming in ES6</h1><p>Since I migrated one of the bigger projects at work to ES6, I’ve been more and more interested in functional programming and the idea of having little to no state mutation.</p>
+<p>I feel that Javascript lends itself very well to functional programming paradigms, especially with the changes presented in ES6. You can use the basic prototype methods of the existing data structures right out of the box and be 90% of the way there. You just have to understand what’s happening internally.</p>
+<p>One of the ways that I’ve been improving my understading and skills recently has been with <a href="https://www.codewars.com" target="_blank" rel="external">CodeWars</a>. Free code kata are a great way to challenge yourself with new problems and creative solutions. Since the problems presented on CodeWars are designed by the community, I’ve seen unique solutions to problems that I never would have dreamed of.</p>
+<p>For example I saw one particular problem solved in 1 line of code with a reverse lookup RegEx. While it wasn’t entirely practical since you would have to explain how it worked to almost everyone else on the team, it was exciting to see such a creative solution.</p>
+<p><em>Here’s one example of a recent problem I solved:</em></p>
+<h3 id="Convert-number-to-reversed-array-of-digits"><a href="#Convert-number-to-reversed-array-of-digits" class="headerlink" title="Convert number to reversed array of digits"></a>Convert number to reversed array of digits</h3><blockquote><br>Given a random number:<br>You have to return the digits of this number within an array in reverse order.<br><br>example: 348597 -&gt; [7,9,5,8,4,3]<br></blockquote>
+
+
+<p>And my solution could look like this (there are shorter methods, but this is the one I wrote):</p>
+<p data-height="128" data-theme-id="0" data-slug-hash="MbYVao" data-default-tab="js" data-user="trevoristall" data-embed-version="2" data-pen-title="MbYVao" class="codepen">See the Pen <a href="http://codepen.io/trevoristall/pen/MbYVao/" target="_blank" rel="external">MbYVao</a> by Trevor Allen (<a href="http://codepen.io/trevoristall" target="_blank" rel="external">@trevoristall</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p>
+
+
+<p>No variables are created, no existing data is mutated. It operates like a coin machine, data in, data out.</p>
+<p>Here’s another problem:</p>
+<h3 id="Double-String"><a href="#Double-String" class="headerlink" title="Double String"></a>Double String</h3><blockquote><br><br>Given a string, you have to return a string in which each character (case-sensitive) is repeated once.<br><br>example: doubleChar(“String”) ==&gt; “SSttrriinngg”<br></blockquote>
+
+<p>And my solution:</p>
+<p data-height="128" data-theme-id="0" data-slug-hash="QGwmNG" data-default-tab="js" data-user="trevoristall" data-embed-version="2" data-pen-title="QGwmNG" class="codepen">See the Pen <a href="http://codepen.io/trevoristall/pen/QGwmNG/" target="_blank" rel="external">QGwmNG</a> by Trevor Allen (<a href="http://codepen.io/trevoristall" target="_blank" rel="external">@trevoristall</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p>
+
+
+<p>Simple and easy to understand.</p>
+<p>If you haven’t given it a try, I highly recommend CodeWars as a place to improve your skills and see new ways to solve old problems.</p>
+
+  </section>
+
+</article>
+
+
+  
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'mynameistrevor-com';
+  
+  var disqus_url = 'http://mynameistrevor.com/functional programming/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  
+
+	</main>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+	<script src="/js/app.js"></script>
+</body>
+</html>
