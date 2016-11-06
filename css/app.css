@@ -53,8 +53,11 @@ h3 {
 p {
   margin: 0 0 1.6em; }
 
+small {
+  font-size: .6rem; }
+
 a {
-  color: #30343F;
+  color: #4359b3;
   text-decoration: none;
   transition: color 0.4s ease-in-out; }
   a:hover, a:active, a:focus {
@@ -102,8 +105,14 @@ ol, ul {
 .bg-white {
   background-color: white; }
 
+.bg-grey {
+  background-color: #f3f4f7; }
+
 .bg-alpha {
   background-color: #273469; }
+
+.bg-omega {
+  background-color: #5DD39E; }
 
 .c-white {
   color: white; }
@@ -132,7 +141,7 @@ ol, ul {
 /**
  * Letter Spacing
  */
-.previews__container span, .preview__more, .card__more, .pagination, .next__container span, .archives__header {
+.previews__container span, .preview__more, .card__more, .pagination, .next__container span, .archives__header, .button {
   font-family: "Merriweather", serif;
   letter-spacing: 0.05em;
   text-transform: uppercase; }
@@ -414,8 +423,6 @@ ol, ul {
   .post p:first-child,
   .post h2:first-child + p {
     font-size: 1.25rem; }
-  .post a {
-    border-bottom: 1px solid #273469; }
   .post img {
     padding-bottom: 0.75em; }
   .post figure {
@@ -571,19 +578,13 @@ section {
   color: #273469; }
 
 .button {
-  background: #5DD39E;
-  color: white;
-  line-height: 1;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 1em 2em;
-  margin: .5em 0;
   display: inline-block;
-  will-change: background, color;
-  transition: color .3s ease, background .3s ease; }
-  .button:hover, .button:active {
-    background: #85deb6;
-    color: white; }
+  padding: 0.5em;
+  font-family: "Merriweather", serif;
+  color: #273469;
+  border: 3px solid #273469;
+  box-shadow: inset 0 0 0 0 #273469;
+  transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
 
 .delay {
   animation-delay: .1s; }
